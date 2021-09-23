@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class checkduplicate {
     static void findDuplicates(int arr[], int len)
 	{
-		boolean ifPresent = false;
+		int flag=0;
 		ArrayList<Integer> al = new ArrayList<>();
 		for (int i = 0; i < len - 1; i++) {
 			for (int j = i + 1; j < len; j++) {
@@ -14,12 +14,12 @@ public class checkduplicate {
 					}
 					else {
 						al.add(arr[i]);
-						ifPresent = true;
+						flag=1;
 					}
 				}
 			}
 		}
-		if (ifPresent == true) {
+		if (flag==1) {
 
 			System.out.print("YES");
 		}
